@@ -6,8 +6,10 @@ export const getPokemon = () => {
     axios
       .get("https://pokeapi.co/api/v2/pokemon")
       .then((res) => {
-        console.log("HERE", res);
-        dispatch(fetchSuccess(res.data.results[0]));
+        console.log("HERE", res.data.results);
+        dispatch(
+          fetchSuccess(res.data.results[Math.floor(Math.random() * 20)].name)
+        );
       })
       .catch((err) => {
         dispatch(fetchFail(err));

@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 // import axios from 'axios'
 
 const Pokemon = (props) => {
-  const { name, isFetching, error } = props;
+  const { name, url, isFetching, error } = props;
 
   useEffect(() => {
     props.getPokemon();

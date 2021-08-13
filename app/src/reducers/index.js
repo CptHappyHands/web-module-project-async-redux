@@ -2,7 +2,7 @@ import { FETCH_FAIL, FETCH_START, FETCH_SUCCESS } from "../actions";
 
 const initialState = {
   name: "Working",
-
+    url: "",
   isFetching: false,
   error: "",
 };
